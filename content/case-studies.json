@@ -1,0 +1,163 @@
+{
+  "caseStudies": [
+    {
+      "slug": "molecular-gcn-selfies-transformer",
+      "overview": "A dual-view molecular learning project that aligns graph and SELFIES representations for cross-modal retrieval and molecular generation.",
+      "problem": "Molecules can be represented as both molecular graphs and token sequences. This project explores how to align those two views so they can support retrieval as well as generation.",
+      "approach": "The notebook preprocesses molecules with RDKit, encodes graph and SELFIES views with separate neural branches, and trains them with contrastive alignment. Retrieval and generation are evaluated separately; generation uses top-k and nucleus sampling.",
+      "architecture": [
+        {
+          "stage": "Molecular inputs",
+          "detail": "RDKit preprocessing supplies a molecular graph and a SELFIES sequence for each molecule."
+        },
+        {
+          "stage": "Parallel encoders",
+          "detail": "A residual graph convolutional network encodes graph structure while a causal Transformer encodes the SELFIES sequence."
+        },
+        {
+          "stage": "Contrastive alignment",
+          "detail": "The graph and sequence representations are jointly aligned for cross-modal retrieval."
+        },
+        {
+          "stage": "Retrieval and generation",
+          "detail": "The learned representations support bidirectional retrieval; the sequence model generates molecules with top-k or nucleus sampling."
+        }
+      ],
+      "resultSummary": "The repository README reports retrieval, RDKit validity, and generation acceptance results for the project evaluation.",
+      "metrics": [
+        {
+          "label": "Graph → SELFIES · Top-1",
+          "value": "78.81%",
+          "context": "Cross-modal retrieval"
+        },
+        {
+          "label": "SELFIES → Graph · Top-1",
+          "value": "80.24%",
+          "context": "Cross-modal retrieval"
+        },
+        {
+          "label": "Graph → SELFIES · Top-5",
+          "value": "98.57%",
+          "context": "Cross-modal retrieval"
+        },
+        {
+          "label": "SELFIES → Graph · Top-5",
+          "value": "97.62%",
+          "context": "Cross-modal retrieval"
+        },
+        { "label": "RDKit validity", "value": "100%", "context": "Generated structures" },
+        {
+          "label": "Best generation acceptance",
+          "value": "87.33%",
+          "context": "Repository-reported rate"
+        }
+      ],
+      "limitations": [
+        "The README reports results for this project evaluation; it does not report experimental synthesis or downstream drug-development validation.",
+        "Generation acceptance and chemical validity do not establish the biological activity or safety of generated molecules."
+      ],
+      "sourceUrl": "https://github.com/SagharKheradmand/molecular-gcn-selfies-transformer/blob/main/README.md",
+      "evidenceUrl": "https://github.com/SagharKheradmand/molecular-gcn-selfies-transformer/blob/main/NNDL_Prj4_GCN_Transformer_Molecular_Modified.ipynb",
+      "evidenceLabel": "Open the project notebook"
+    },
+    {
+      "slug": "real-world-kernel-learning",
+      "overview": "A graduate machine-learning project comparing kernel and non-kernel methods across four datasets with different data and scale challenges.",
+      "problem": "The selected datasets bring different challenges, including missing values, outliers, class imbalance, nonlinear structure, and large-scale data. The project studies how those conditions affect model choice and analysis.",
+      "approach": "Dataset-specific notebooks cover data cleaning and feature engineering, then compare methods such as linear and logistic models, K-nearest neighbors, decision trees, kernel SVM, kernel ridge regression, kernel KNN, and kernel PCA. The repository also documents failure, bias, and computational-complexity analysis.",
+      "architecture": [
+        {
+          "stage": "Four dataset workflows",
+          "detail": "Separate notebooks cover Airbnb Open Data, NYC 311 service requests, IBM HR employee attrition, and online retail transactions."
+        },
+        {
+          "stage": "Data preparation",
+          "detail": "The workflows examine cleaning, feature engineering, missing data, outliers, and class imbalance."
+        },
+        {
+          "stage": "Method comparisons",
+          "detail": "Kernel methods are compared with listed non-kernel approaches, including linear/logistic models, KNN, and decision trees."
+        },
+        {
+          "stage": "Failure and cost analysis",
+          "detail": "The project topics include failure and bias analysis as well as computational complexity."
+        }
+      ],
+      "resultSummary": "The public notebooks and expanded report present dataset-specific analyses and charts. The README does not state one aggregate score or a universal winning method.",
+      "metrics": [],
+      "limitations": [
+        "Conclusions are scoped to the four datasets and tasks in the repository; they should not be read as a universal ranking of kernel and non-kernel methods.",
+        "The README presents no single cross-dataset metric that summarizes the comparisons."
+      ],
+      "sourceUrl": "https://github.com/SagharKheradmand/real-world-kernel-learning/blob/main/README.md",
+      "evidenceUrl": "https://github.com/SagharKheradmand/real-world-kernel-learning/blob/main/project3_five_cities.ipynb",
+      "evidenceLabel": "Open a dataset notebook"
+    },
+    {
+      "slug": "hough-transform-image-processing",
+      "overview": "From-scratch Hough Transform implementations applied to traffic-light detection, lane detection, and object localization.",
+      "problem": "The project applies geometric voting methods to practical image-processing tasks: finding traffic-light circles and states, detecting lane lines, and localizing objects with a generalized transform.",
+      "approach": "The repository describes Gaussian filtering and Sobel edge detection before Hough circle or line voting. Its generalized Hough work uses gradient-based voting and R-table construction; the algorithms are implemented mostly from scratch with NumPy and fundamental image-processing operations.",
+      "architecture": [
+        {
+          "stage": "Image preparation",
+          "detail": "Gaussian filtering and Sobel edge detection prepare image features for geometric voting."
+        },
+        {
+          "stage": "Traffic-light and lane paths",
+          "detail": "Hough circles support lamp detection and state classification; the polar Hough line transform supports lane detection."
+        },
+        {
+          "stage": "Generalized object path",
+          "detail": "Gradient-based voting and an R-table support generalized Hough object localization."
+        },
+        {
+          "stage": "Implementation",
+          "detail": "The repository lists NumPy vectorization and OpenCV alongside its from-scratch transform implementations."
+        }
+      ],
+      "resultSummary": "Repository outputs show a traffic-light example with detected lamp circles and state labels. The README describes the lane-detection and generalized-object tasks but gives no aggregate performance score.",
+      "metrics": [],
+      "limitations": [
+        "The README does not publish quantitative accuracy or runtime results for the example tasks.",
+        "The visible overlay documents an example output; it does not establish performance across broader traffic or road conditions."
+      ],
+      "sourceUrl": "https://github.com/SagharKheradmand/hough-transform-image-processing/blob/main/README.md",
+      "evidenceUrl": "https://github.com/SagharKheradmand/hough-transform-image-processing/blob/main/Part1/outputs_part1_corrected/green_light_1_final_overlay.png",
+      "evidenceLabel": "Open the traffic-light output"
+    },
+    {
+      "slug": "covid19-severity-imbalanced-learning",
+      "overview": "An imbalanced-classification study comparing ensemble approaches for predicting severe COVID-19 cases from clinical and demographic data.",
+      "problem": "The repository dataset has 1,585 samples, including 100 severe and 1,485 non-severe cases, an approximate 15:1 imbalance. The project focuses on evaluating the minority severe class under that skew.",
+      "approach": "The repository compares a Hellinger Distance Decision Tree, bagging with majority-class undersampling, and AdaBoost.M1 with SMOTE. It lists missing-value imputation and feature selection and evaluates imbalance-aware measures including minority-class recall, F1-score, AUC-ROC, and G-mean.",
+      "architecture": [
+        {
+          "stage": "Clinical and demographic data",
+          "detail": "The README describes 40 input features across 1,585 samples, with 100 severe cases."
+        },
+        {
+          "stage": "Preparation",
+          "detail": "The project topics include missing-value imputation and feature selection."
+        },
+        {
+          "stage": "Imbalance-aware learners",
+          "detail": "Three listed approaches are HDDT, majority-class undersampling with bagging, and AdaBoost.M1 with SMOTE."
+        },
+        {
+          "stage": "Evaluation",
+          "detail": "The repository lists minority-class recall, F1-score, AUC-ROC, and G-mean as evaluation measures."
+        }
+      ],
+      "resultSummary": "The saved AdaBoost + SMOTE figure plots mean train error, test error, and severe-class F1 across boosting rounds, averaged over 10 runs. The README does not summarize one consolidated best score.",
+      "metrics": [],
+      "limitations": [
+        "The documented dataset contains 100 severe cases, so the minority-class sample count is limited in the repository evaluation.",
+        "The README does not report external validation or a deployment study; results should be read as dataset-level experiments."
+      ],
+      "sourceUrl": "https://github.com/SagharKheradmand/covid19-severity-imbalanced-learning/blob/main/README.md",
+      "evidenceUrl": "https://github.com/SagharKheradmand/covid19-severity-imbalanced-learning/blob/main/figures/adaboost_smote_rounds.png",
+      "evidenceLabel": "Open the AdaBoost + SMOTE figure"
+    }
+  ]
+}

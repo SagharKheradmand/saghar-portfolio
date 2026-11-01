@@ -1,0 +1,21 @@
+{
+  "name": "Saghar Kheradmand",
+  "headline": "M.Sc. student in Artificial Intelligence at Shiraz University",
+  "introduction": "I turn machine learning ideas into working code through reproducible experiments, from-scratch implementations, and careful evaluation.",
+  "focusAreas": [
+    {
+      "label": "Computer vision",
+      "description": "Image processing, edge detection, and object localization."
+    },
+    {
+      "label": "Pattern recognition",
+      "description": "Classification, dimensionality reduction, and model evaluation."
+    },
+    {
+      "label": "Intelligent systems",
+      "description": "Reinforcement learning, evolutionary computation, and search."
+    }
+  ],
+  "about": "I am interested in the point where an idea becomes a working, testable system. My public projects document experiments with real-world data, from implementing algorithms from scratch to building reproducible workflows and examining model behavior.\n\nAlongside AI coursework, I build backend and web projects. I am currently strengthening my machine learning and computer vision knowledge through practical work, with an emphasis on clear evaluation and useful software.",
+  "portrait": "/images/saghar-kheradmand-github-avatar.jpg"
+}

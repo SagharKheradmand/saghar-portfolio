@@ -1,0 +1,81 @@
+{
+  "pdfUrl": "/resume/Saghar_Kheradmand_AI_Resume.pdf",
+  "intro": "A concise record of my education, practical internship, technical skills, and selected projects.",
+  "education": [
+    {
+      "degree": "M.Sc. in Artificial Intelligence / AI Engineering",
+      "institution": "Shiraz University",
+      "period": "2025–Present",
+      "status": "Currently studying",
+      "focus": "Machine learning, pattern recognition, intelligent systems, computer vision, neural networks, and data science."
+    }
+  ],
+  "experience": [
+    {
+      "role": "SEO and Web Design Intern",
+      "organization": "Practical internship experience",
+      "period": "Three-month internship",
+      "details": [
+        "Supported website design and content presentation tasks with attention to usability, responsive structure, and clear page organization.",
+        "Assisted with basic on-page SEO, content structure, keyword-focused improvements, and website performance review."
+      ]
+    }
+  ],
+  "skillGroups": [
+    {
+      "category": "Machine Learning & Methods",
+      "skills": [
+        "scikit-learn",
+        "Neural networks",
+        "Classification & regression",
+        "PCA",
+        "LDA & QDA",
+        "Naive Bayes",
+        "Ensemble & imbalanced learning",
+        "Model evaluation"
+      ]
+    },
+    {
+      "category": "Python & Data",
+      "skills": ["Python", "NumPy", "Pandas", "SciPy", "Matplotlib", "Jupyter"]
+    },
+    {
+      "category": "Vision & Image Processing",
+      "skills": [
+        "Edge detection",
+        "Canny",
+        "Hough transform",
+        "Image restoration",
+        "Eigenfaces",
+        "Object localization"
+      ]
+    },
+    {
+      "category": "Reinforcement & Evolutionary Systems",
+      "skills": [
+        "Reinforcement learning",
+        "Value-function approximation",
+        "Evolutionary computing",
+        "Genetic algorithms",
+        "Genetic programming",
+        "Search & optimization"
+      ]
+    },
+    {
+      "category": "Backend & Databases",
+      "skills": ["Go", "REST APIs", "gRPC", "SQL", "PostgreSQL", "MySQL", "Redis", "RabbitMQ"]
+    },
+    {
+      "category": "Web & Delivery",
+      "skills": [
+        "Responsive layout",
+        "On-page SEO",
+        "Git",
+        "Linux",
+        "Docker",
+        "CI/CD",
+        "Unit testing"
+      ]
+    }
+  ]
+}
